@@ -1,7 +1,11 @@
 # Write your solution here
 def row_correct(sudoku : list, row_index : int):
-    pass
-
+    used = [False] * 10
+    for n in sudoku[row_index]:
+        if used[n] and n != 0:
+            return False
+        used[n] = True
+    return True
 
 
 
